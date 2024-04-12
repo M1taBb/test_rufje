@@ -157,4 +157,5 @@ class TestWin(QWidget):
 
     def next_click(self):
         self.hide()
-        self.tw = FinalWin(self.index_int, self.vozrast)
+        if (self.strok_3.text() =! '') or (self.strok_4.text() =! '') or (self.strok_5.text() =! '') or (self.strok_2.text() =! ''):
+            self.tw = FinalWin(self.index_int, self.vozrast)
