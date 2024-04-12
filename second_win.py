@@ -149,13 +149,13 @@ class TestWin(QWidget):
         self.index_int = (4 * (self.result_1 + self.result_2 + self.result_3) - 200) / 10
 
     def connects(self):
-        self.button_final.clicked.connect(self.new_info)
         self.button_final.clicked.connect(self.next_click)
         self.button_start_1.clicked.connect(self.time_tick)
         self.button_start_2.clicked.connect(self.second_timer)
         self.button_start_3.clicked.connect(self.final_timer)
 
     def next_click(self):
-        self.hide()
-        if (self.strok_3.text() =! '') or (self.strok_4.text() =! '') or (self.strok_5.text() =! '') or (self.strok_2.text() =! ''):
+        if (self.strok_3.text() != '') and (self.strok_4.text() != '') and (self.strok_5.text() != '') and (self.strok_2.text() != ''):
+            self.new_info()
+            self.hide()
             self.tw = FinalWin(self.index_int, self.vozrast)
